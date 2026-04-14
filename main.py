@@ -40,6 +40,7 @@ def main():
     media_variaveis_cancer= analyse_mean_variable_cancer(df)
     mcp_cancer = analyse_mcp_cancer(df)
     contigencia = analyse_contig(df)
+    carregamento = load(df)
     
     
     return {'df': df,
@@ -55,7 +56,8 @@ def main():
             'classificacao_insulina': classificacao_insulina,
             'classificacao_glicose': classificacao_glicose,
             'correlacao_variaveis':correlacao_variaveis,
-            'contigencia': contigencia
+            'contigencia': contigencia,
+            'load':carregamento
             }
 
 
