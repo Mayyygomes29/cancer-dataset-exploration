@@ -99,6 +99,40 @@ def page_metrics():
          analise = analise['metrics']
          st.table(analise)
 
+         
+st.markdown("""
+<style>
+
+/* Fundo da sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #001f3f !important;
+}
+
+/* Área do navigation */
+[data-testid="stSidebarNav"] {
+    background-color: #001f3f !important;
+}
+
+/* Texto geral */
+[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+/* Itens do menu */
+[data-testid="stSidebarNav"] a {
+    color: white !important;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+/* Item selecionado */
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+    background-color: #003366 !important;
+    font-weight: bold;
+}
+
+</style>
+""", unsafe_allow_html=True)
 pg = st.navigation({
     'Home':[
         st.Page(page_home, title='Home' )
