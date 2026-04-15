@@ -1,5 +1,3 @@
-import pandas as pd
-
 from src.analysis.eda import variable_correlation,analyse_age_cancer, analyse_qnt_cancer
 from src.analysis.eda import analyse_cluster,analyse_mean_variable_cluster
 from src.analysis.eda import analyse_contig, analyse_mean_variable_cancer,analyse_mcp_cancer, analyse_classification
