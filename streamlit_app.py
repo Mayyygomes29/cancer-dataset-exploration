@@ -99,7 +99,7 @@ def page_metrics():
          analise = analise['metrics']
          st.table(analise)
 
-         
+
 st.markdown("""
 <style>
 
@@ -133,20 +133,13 @@ section[data-testid="stSidebar"] {
 
 </style>
 """, unsafe_allow_html=True)
-pg = st.navigation({
-    'Home':[
-        st.Page(page_home, title='Home' )
-    ],
-    'EDA': [
-        st.Page(page_eda, title="Análise Exploratória")
-    ],
-    'Modelo': [
-        st.Page(page_model, title="Análise de Modelo")
-    ],
-    'Métricas': [
-        st.Page(page_metrics, title = 'Métricas do Modelo')
-    ]
-    
-})
+
+
+pg = st.navigation([
+    st.Page(page_home, title='Home'),
+    st.Page(page_eda, title="Análise Exploratória"),
+    st.Page(page_model, title="Análise de Modelo"),
+    st.Page(page_metrics, title='Métricas do Modelo')
+])
 
 pg.run()
