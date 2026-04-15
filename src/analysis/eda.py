@@ -75,6 +75,7 @@ def analyse_mean_variable_cancer(df):
 #PROPOÇÃO DE NÍVEIS DE MCP1 COM CÂNCER
 #=====================================
 def analyse_mcp_cancer(df):
+    df = df.copy()
     df['class_mcp_num'] =df['classificacao_mcp'].replace({'Normal':0, 'Moderado':1, 'Alto':2}) 
     return df.groupby('cancer')['class_mcp_num'].value_counts(normalize = True) * 100
     
