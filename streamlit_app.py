@@ -93,6 +93,7 @@ def page_model():
 
 
 def page_metrics():
+    st.title(":red[Métricas] - Modelo de Classificação", text_alignment='center')
     col1 , col2 = st.columns(2)
     with col1:
          analise = resultados['classificacao']
